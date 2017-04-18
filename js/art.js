@@ -28,6 +28,7 @@ function randomiseButton() {
   document.getElementById(id).style.width = randomWidth();
   document.getElementById(id).style.borderRadius = randomBorderRadius();
   document.body.style.backgroundColor = randomRGB();
+  playRandomAudio();
 }
 
 function randomRGB(){
@@ -50,4 +51,10 @@ function randomBorderRadius() {
 }
 function randomWidth() {
   return Math.round(Math.random() * 300) + "px";
+}
+
+function playRandomAudio() {
+  var fileToPlay = Math.floor(Math.random() * 11) + 1  ;
+  var audio = document.getElementsByTagName("audio")[fileToPlay];
+  audio.play();
 }
