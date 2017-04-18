@@ -22,6 +22,7 @@ function changeBackgroundColour() {
   var id = event.target.id;
   document.getElementById(id).style.backgroundColor = randomRGB();
   document.getElementById(id).style.color = randomRGB();
+  document.getElementById(id).style.fontSize = randomFontSize();
   document.body.style.backgroundColor = randomRGB();
 }
 
@@ -30,4 +31,8 @@ function randomRGB(){
   var colTwo =  Math.round(Math.random() * 255);
   var colThree =  Math.round(Math.random() * 255);
   return "rgb("+ colOne +","+ colTwo+","+colThree+")";
+}
+
+function randomFontSize() {
+  return Math.round(Math.random() * 200) + "%";
 }
