@@ -1,7 +1,11 @@
 // Need event listeners on all buttons
-document.onload = initialiseButtons();
+document.onload = initialisePage();
+var totalClicks = 0;
+var totalHtml = document.getElementsByClassName('total');
+totalHtml[0].innerHTML = "You have clicked 0 times.";
 
-function initialiseButtons() {
+
+function initialisePage() {
   document.getElementById("one").addEventListener("click", randomiseButton);
   document.getElementById("two").addEventListener("click", randomiseButton);
   document.getElementById("three").addEventListener("click", randomiseButton);
@@ -28,6 +32,8 @@ function randomiseButton() {
   document.getElementById(id).style.width = randomWidth();
   document.getElementById(id).style.borderRadius = randomBorderRadius();
   document.body.style.backgroundColor = randomRGB();
+  totalClicks++;
+  totalHtml[0].innerHTML = "You have clicked " + totalClicks + " times.";
   playRandomAudio();
 }
 
