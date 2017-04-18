@@ -23,7 +23,9 @@ function randomiseButton() {
   document.getElementById(id).style.backgroundColor = randomRGB();
   document.getElementById(id).style.color = randomRGB();
   document.getElementById(id).style.fontSize = randomFontSize();
-  document.getElementById(id).style.margin = randomMargin();
+  document.getElementById(id).style.margin = randomMarginBorder();
+  document.getElementById(id).style.padding = randomMarginBorder();
+  document.getElementById(id).style.borderRadius = randomBorderRadius();
   document.body.style.backgroundColor = randomRGB();
 }
 
@@ -38,6 +40,10 @@ function randomFontSize() {
   return Math.round(Math.random() * 200) + "%";
 }
 
-function randomMargin() {
+function randomMarginBorder() {
   return Math.round(Math.random() * 25) + "%";
+}
+
+function randomBorderRadius() {
+  return Math.round(Math.random() * 50) + "px";
 }
