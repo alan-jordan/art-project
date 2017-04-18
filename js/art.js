@@ -20,7 +20,7 @@ function initialisePage() {
   document.getElementById("twelve").addEventListener("click", randomiseButton);
 }
 
-// Want a div which counts how many clicks we have done
+
 
 function randomiseButton() {
   var id = event.target.id;
@@ -59,6 +59,7 @@ function randomWidth() {
   return Math.round(Math.random() * 300) + "px";
 }
 
+// Need to make sure is 0-12 in array, will fix tomorrow
 function playRandomAudio() {
   var fileToPlay = Math.floor(Math.random() * 11) + 1  ;
   var audio = document.getElementsByTagName("audio")[fileToPlay];
