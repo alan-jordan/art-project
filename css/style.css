@@ -3,8 +3,26 @@ body {
 }
 
 .cell {
-  padding-top: 5%;
+  /*padding-top: 5%;
   padding-bottom: 5%;
-  font-size: 34px;
+  font-size: 34px;*/
+  /*border: 1px solid;*/
+}
+
+
+.button {
+  color: green;
+  background-color: black;
+  display: inline-block;
+  padding: 15% 15% 15% 15%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 36px;
   border: 1px solid;
+  width: 110%;
+  height: 100%;
+}
+.button:focus {
+  outline:0;
 }
