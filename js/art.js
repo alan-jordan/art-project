@@ -16,7 +16,7 @@ function initialiseButtons() {
   document.getElementById("twelve").addEventListener("click", randomiseButton);
 }
 
-
+// Want a div which counts how many clicks we have done
 
 function randomiseButton() {
   var id = event.target.id;
