@@ -1,0 +1,10 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.cell {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 34px;
+  border: 1px solid;
+}
