@@ -3,16 +3,13 @@ body {
   background-color: black;
 }
 
-.cell {
-  /*padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 34px;*/
-  /*border: 1px solid;*/
+h1 {
+  color: red;
 }
 
 
 .button {
-  color: green;
+  color: red;
   background-color: black;
   display: inline-block;
   padding: 15% 15% 15% 15%;

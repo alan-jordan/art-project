@@ -2,27 +2,28 @@
 document.onload = initialiseButtons();
 
 function initialiseButtons() {
-  document.getElementById("one").addEventListener("click", changeBackgroundColour);
-  document.getElementById("two").addEventListener("click", changeBackgroundColour);
-  document.getElementById("three").addEventListener("click", changeBackgroundColour);
-  document.getElementById("four").addEventListener("click", changeBackgroundColour);
-  document.getElementById("five").addEventListener("click", changeBackgroundColour);
-  document.getElementById("six").addEventListener("click", changeBackgroundColour);
-  document.getElementById("seven").addEventListener("click", changeBackgroundColour);
-  document.getElementById("eight").addEventListener("click", changeBackgroundColour);
-  document.getElementById("nine").addEventListener("click", changeBackgroundColour);
-  document.getElementById("ten").addEventListener("click", changeBackgroundColour);
-  document.getElementById("eleven").addEventListener("click", changeBackgroundColour);
-  document.getElementById("twelve").addEventListener("click", changeBackgroundColour);
+  document.getElementById("one").addEventListener("click", randomiseButton);
+  document.getElementById("two").addEventListener("click", randomiseButton);
+  document.getElementById("three").addEventListener("click", randomiseButton);
+  document.getElementById("four").addEventListener("click", randomiseButton);
+  document.getElementById("five").addEventListener("click", randomiseButton);
+  document.getElementById("six").addEventListener("click", randomiseButton);
+  document.getElementById("seven").addEventListener("click", randomiseButton);
+  document.getElementById("eight").addEventListener("click", randomiseButton);
+  document.getElementById("nine").addEventListener("click", randomiseButton);
+  document.getElementById("ten").addEventListener("click", randomiseButton);
+  document.getElementById("eleven").addEventListener("click", randomiseButton);
+  document.getElementById("twelve").addEventListener("click", randomiseButton);
 }
 
 
 
-function changeBackgroundColour() {
+function randomiseButton() {
   var id = event.target.id;
   document.getElementById(id).style.backgroundColor = randomRGB();
   document.getElementById(id).style.color = randomRGB();
   document.getElementById(id).style.fontSize = randomFontSize();
+  document.getElementById(id).style.margin = randomMargin();
   document.body.style.backgroundColor = randomRGB();
 }
 
@@ -35,4 +36,8 @@ function randomRGB(){
 
 function randomFontSize() {
   return Math.round(Math.random() * 200) + "%";
+}
+
+function randomMargin() {
+  return Math.round(Math.random() * 25) + "%";
 }
