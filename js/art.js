@@ -61,7 +61,7 @@ function randomWidth() {
 
 // Need to make sure is 0-12 in array, will fix tomorrow
 function playRandomAudio() {
-  var fileToPlay = Math.floor(Math.random() * 11) + 1  ;
+  var fileToPlay = Math.floor(Math.random() * 12)  ;
   var audio = document.getElementsByTagName("audio")[fileToPlay];
   audio.play();
 }
